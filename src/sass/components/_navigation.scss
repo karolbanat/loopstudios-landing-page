@@ -13,7 +13,7 @@
 		// for mobile
 		@include mixins.max-mq(medium) {
 			display: none;
-			position: fixed;
+			position: absolute;
 			inset: 0 0 auto 0;
 			padding: var(--spacing-rem-400);
 			height: 100vh;
@@ -29,6 +29,7 @@
 		--gap: var(--spacing-rem-400);
 		display: grid;
 		gap: var(--gap);
+		width: 100%;
 
 		@include mixins.mq(medium) {
 			--gap: var(--spacing-rem-500);

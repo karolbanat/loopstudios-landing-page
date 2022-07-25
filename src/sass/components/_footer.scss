@@ -1,0 +1,34 @@
+@use '../base/mixins';
+
+.footer {
+	padding-block: clamp(var(--spacing-rem-600), 7.5vw, var(--spacing-rem-650));
+	background-color: var(--clr-neutral-900);
+
+	&__body {
+		--gap: var(--spacing-rem-500);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: var(--gap);
+
+		@include mixins.mq(medium) {
+			--gap: var(--spacing-rem-400);
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			max-height: 9rem;
+
+			& > *:nth-child(n + 3) {
+				align-self: flex-end;
+			}
+		}
+	}
+
+	&__copyright {
+		font-size: var(--fz-400);
+		color: var(--clr-neutral-200);
+	}
+}

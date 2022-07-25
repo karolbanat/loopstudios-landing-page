@@ -1,0 +1,11 @@
+.media {
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: var(--spacing-rem-300);
+	}
+
+	&__list-item {
+		font-size: 2.4rem;
+	}
+}
