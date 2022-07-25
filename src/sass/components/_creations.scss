@@ -1,0 +1,48 @@
+@use '../base/mixins';
+
+.creations {
+	--margin-min: var(--spacing-rem-900);
+	--margin-max: calc(var(--spacing-rem-900) * 2);
+
+	margin-block: clamp(var(--margin-min), 5rem + 10vw, var(--margin-max));
+
+	// --- elements
+	&__body {
+		display: grid;
+		gap: clamp(var(--spacing-rem-600), 8vw, var(--spacing-rem-800));
+
+		@include mixins.mq(medium) {
+			grid-template-columns: 1fr auto;
+		}
+	}
+
+	&__cards {
+		--gap: var(--spacing-rem-400);
+		display: grid;
+		gap: var(--gap);
+		grid-template-rows: auto;
+
+		@include mixins.mq(medium) {
+			grid-column: span 2;
+			grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		}
+	}
+
+	&__heading {
+		margin-bottom: 0;
+
+		@include mixins.mq(medium) {
+			grid-row: 1;
+			text-align: initial;
+		}
+	}
+
+	&__button {
+		justify-self: center;
+		grid-row: 3;
+
+		@include mixins.mq(medium) {
+			grid-row: 1;
+		}
+	}
+}

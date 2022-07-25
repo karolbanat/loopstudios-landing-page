@@ -1,0 +1,22 @@
+.button {
+	--text: var(--clr-neutral-900);
+	--background: var(--clr-neutral-100);
+	--border: var(--clr-neutral-900);
+
+	display: inline-block;
+	padding: var(--spacing-em-300) var(--spacing-em-700);
+	font-size: var(--fz-300);
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 4px;
+	color: var(--text);
+	background-color: var(--background);
+	border: 1px solid var(--border);
+	transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+
+	&:hover,
+	&:focus-visible {
+		--text: var(--clr-neutral-100);
+		--background: var(--clr-neutral-900);
+	}
+}

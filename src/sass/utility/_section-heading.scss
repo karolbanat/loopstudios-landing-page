@@ -1,4 +1,11 @@
+@use '../base/mixins';
+
 .section-heading {
+	text-align: center;
 	margin-bottom: var(--spacing-em-200);
 	font-size: var(--fz-600);
+
+	@include mixins.mq(large) {
+		text-align: initial;
+	}
 }
