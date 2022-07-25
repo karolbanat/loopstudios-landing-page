@@ -1,0 +1,38 @@
+@use '../base/mixins';
+
+.header {
+	--bg-image: url('../images/mobile/image-hero.jpg');
+	padding-top: clamp(var(--spacing-rem-600), 5vw, var(--spacing-rem-700));
+	background-image: var(--bg-image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	@include mixins.mq(medium) {
+		--bg-image: url('../images/desktop/image-hero.jpg');
+	}
+
+	// --- elements
+	&__body {
+		--padding-top-min: calc(var(--spacing-rem-800) * 1.5);
+		--padding-top-max: calc(var(--spacing-rem-800) * 2);
+		--padding-bottom-min: calc(var(--spacing-rem-800) * 1.5);
+		--padding-bottom-max: calc(var(--spacing-rem-800) * 2.75);
+
+		padding-top: clamp(var(--padding-top-min), 20rem - 7.5vw, var(--padding-top-max));
+		padding-bottom: clamp(var(--padding-bottom-min), 30rem - 20vw, var(--padding-bottom-max));
+	}
+
+	&__content-box {
+		padding-inline: clamp(var(--spacing-rem-400), 5vw, var(--spacing-rem-600));
+		padding-top: clamp(var(--spacing-rem-500), 5vw, var(--spacing-rem-650));
+		padding-bottom: 0.8rem;
+		max-width: 65rem;
+		border: 1px solid var(--clr-neutral-100);
+	}
+
+	&__heading {
+		font-size: var(--fz-700);
+		color: var(--clr-neutral-100);
+	}
+}
