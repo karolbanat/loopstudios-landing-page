@@ -24,9 +24,7 @@
 	}
 
 	&__content-box {
-		padding-inline: clamp(var(--spacing-rem-400), 5vw, var(--spacing-rem-600));
-		padding-top: clamp(var(--spacing-rem-500), 5vw, var(--spacing-rem-650));
-		padding-bottom: 0.8rem;
+		padding: clamp(var(--spacing-rem-400), 5vw, var(--spacing-rem-600));
 		max-width: 65rem;
 		border: 1px solid var(--clr-neutral-100);
 	}
