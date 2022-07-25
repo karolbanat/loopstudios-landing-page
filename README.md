@@ -9,8 +9,8 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution Page](https://your-solution-url.com)
-- Live Site URL: [GitHub Pages Site](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/loopstudios-landing-page-aKXhrj4DMJ)
+- Live Site URL: [GitHub Pages Site](https://karolbanat.github.io/loopstudios-landing-page/)
 
 ## Author
 
