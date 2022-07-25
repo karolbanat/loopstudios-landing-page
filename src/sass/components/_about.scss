@@ -1,0 +1,53 @@
+@use '../base/mixins';
+
+.about {
+	--margin-min: var(--spacing-rem-900);
+	--margin-max: calc(var(--spacing-rem-800) * 2);
+
+	margin-block: clamp(var(--margin-min), 5rem + 10vw, var(--margin-max));
+
+	// --- elements
+	&__body {
+		--gap: var(--spacing-rem-625);
+		display: grid;
+		gap: var(--gap);
+
+		@include mixins.mq(large) {
+			--gap: var(--spacing-rem-450);
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: repeat(12, 1fr);
+		}
+	}
+
+	&__content {
+		padding-inline: var(--spacing-rem-400);
+		background-color: var(--clr-neutral-100);
+		text-align: center;
+
+		& p {
+			color: var(--clr-neutral-700);
+		}
+
+		@include mixins.mq(large) {
+			grid-column: 7 / span 6;
+			grid-row: 5 / -1;
+			padding-inline: 0;
+			padding-top: var(--spacing-rem-900);
+			padding-left: var(--spacing-rem-900);
+			text-align: initial;
+		}
+	}
+
+	&__picture {
+		@include mixins.mq(large) {
+			grid-column: 1 / span 8;
+			grid-row: 1 / -1;
+		}
+	}
+
+	&__image {
+		margin-inline: auto;
+		height: 100%;
+		object-fit: cover;
+	}
+}
